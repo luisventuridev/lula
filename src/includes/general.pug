@@ -1,0 +1,11 @@
+include config
+
+doctype
+html
+    head
+        title= `${pageTitle} - ${siteName}`
+        body 
+            include menu
+            block content
+
+            include footer
