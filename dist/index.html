@@ -1,18 +1,137 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Bienvenidos - Lula Acosta</title>
-    <body> 
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Yo</a></li>
-        <li><a href="#">Trabajos</a></li>
-        <li><a href="#">Amigos</a></li>
-        <li><a href="#">Contacto</a></li>
-        <h1> Hola</h1>
-      </ul>
-      <p>Hola a todos</p>
-      <h1>hola</h1>
-    </body>
-  </head>
-</html>
+<html></html>
+<head>
+  <title>Bienvenidos - Lula Acosta</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body> 
+  <div class="logo"><img src="img/logo.svg" alt="logo"></div>
+  <div class="wrap">
+    <div class="arrow" id="arrow-left"></div>
+    <div id="slider">
+      <div class="slide slide1">
+        <div class="slide-content"><span>Imagen 1</span></div>
+      </div>
+      <div class="slide slide2">
+        <div class="slide-content"><span>Imagen 2</span></div>
+      </div>
+      <div class="slide slide3">
+        <div class="slide-content"><span>Imagen 3</span></div>
+      </div>
+    </div>
+    <div class="arrow" id="arrow-right"> </div>
+  </div>
+  <ul class="menu-home">
+    <li><a href="#">yo</a></li>
+    <li><a href="#">trabajo</a></li>
+    <li><a href="#">amigos</a></li>
+    <li><a href="#">contacto</a></li>
+  </ul>
+  <script>
+    let sliderImages = document.querySelectorAll(".slide"),
+    arrowLeft = document.querySelector("#arrow-left"),
+    arrowRight = document.querySelector("#arrow-right"),
+    current = 0;
+    
+    // Clear all images
+    function reset() {
+    for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = "none";
+    }
+    }
+    
+    // Init slider
+    function startSlide() {
+    reset();
+    sliderImages[0].style.display = "block";
+    }
+    
+    // Show prev
+    function slideLeft() {
+    reset();
+    sliderImages[current - 1].style.display = "block";
+    current--;
+    }
+    
+    // Show next
+    function slideRight() {
+    reset();
+    sliderImages[current + 1].style.display = "block";
+    current++;
+    }
+    
+    // Left arrow click
+    arrowLeft.addEventListener("click", function() {
+    if (current === 0) {
+        current = sliderImages.length;
+    }
+    slideLeft();
+    });
+    
+    // Right arrow click
+    arrowRight.addEventListener("click", function() {
+    if (current === sliderImages.length - 1) {
+        current = -1;
+    }
+    slideRight();
+    });
+    
+    startSlide();
+    
+            
+  </script>
+  <script>
+    let sliderImages = document.querySelectorAll(".slide"),
+    arrowLeft = document.querySelector("#arrow-left"),
+    arrowRight = document.querySelector("#arrow-right"),
+    current = 0;
+    
+    // Clear all images
+    function reset() {
+    for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = "none";
+    }
+    }
+    
+    // Init slider
+    function startSlide() {
+    reset();
+    sliderImages[0].style.display = "block";
+    }
+    
+    // Show prev
+    function slideLeft() {
+    reset();
+    sliderImages[current - 1].style.display = "block";
+    current--;
+    }
+    
+    // Show next
+    function slideRight() {
+    reset();
+    sliderImages[current + 1].style.display = "block";
+    current++;
+    }
+    
+    // Left arrow click
+    arrowLeft.addEventListener("click", function() {
+    if (current === 0) {
+        current = sliderImages.length;
+    }
+    slideLeft();
+    });
+    
+    // Right arrow click
+    arrowRight.addEventListener("click", function() {
+    if (current === sliderImages.length - 1) {
+        current = -1;
+    }
+    slideRight();
+    });
+    
+    startSlide();
+    
+            
+  </script>
+  <h1>hola</h1>
+</body>
