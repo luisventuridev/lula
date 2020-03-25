@@ -28,7 +28,7 @@ const gulp = require('gulp'),
 
 
     gulp.task('default', function() { 
-        gulp.watch('./src/scss/styles.scss', gulp.series('estilo'));
+        gulp.watch('./src/scss/*.scss', gulp.series('estilo'));
         gulp.watch('./src/pages/*.pug', gulp.series('estructura'));
 
     }); 

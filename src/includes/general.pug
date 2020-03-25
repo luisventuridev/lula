@@ -5,9 +5,21 @@ html
 head
     title= `${pageTitle} - ${siteName}`
     link(rel="stylesheet", href="css/styles.css")
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 body 
             div.logo
                img(src="img/logo.svg", alt="logo")
+               
+            div.social
+                ul
+                    li: a(href="https://www.instagram.com/" target="_blank")
+                        img(src="img/instagram.svg", alt="Instagram")
+
+                    li: a(href="mailto:productora@lulaacosta.com")
+                        img(src="img/mail.svg", alt="Correo")
+
+                    li: a(href="https://www.linkedin.com/in/lula-acosta/" target="_blank")
+                        img(src="img/linkedin.svg", alt="LinkeIn")
                
             block content
             block script

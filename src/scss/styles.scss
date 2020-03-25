@@ -1,7 +1,10 @@
-@font-face {
-    font-family: 'Recoleta';
-    src: url('fonts/Recoleta-Bold.ttf');
-}
+@import "aboutme.scss";
+@import "home.scss";
+@import "trabajo.scss";
+@import "amigos.scss";
+@import "contacto.scss";
+@import "components.scss";
+
 
 * {
     margin: 0;
@@ -11,114 +14,35 @@
 
 
 body {
-    background-color: black; 
+    background: #000;
 }
 
 // Estilos generales del logo
 
 .logo {
-    width: 100px;
+    width: 80px;
     position: absolute;
-    right: 10%;
-    top: 10%;
+    right: 5%;
+    top: 5%;
     z-index: 1;
 }
 
+.social {
+    position: fixed;
+    left: 2%;
+    z-index: 1;
+    width: 25px; 
+    bottom: 5%;
 
-
-.menu-home {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translatey(-50%);
-    width: 20%; 
-
-   li {
-    font-family: 'Recoleta';
-    font-weight: bold;
-    font-style: normal;
-    margin: 5% 0;
-    text-align: left;
-    font-size: 5rem;
-    list-style: none;
-
-        a {
-            text-decoration: none;
-            color:white;
-            
+    ul {
+        li {
+            padding: 20% 0;
+            list-style: none;
+            opacity: 1;
+            transition: 0.2s ease-in;
             &:hover {
-                color:#FFCADE;
+                opacity: 0.4;
             }
         }
-   }
-}
-
-
-
-
-// Estilos del slider en la pagina principal
-
-#slider, .wrap, .slide-content {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 0; 
-}
- 
-
-.wrap {
-    position: relative;
-}
-
-.slide {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.slide1 {background-image: url(../../dist/img/slide1.jpg);}
-.slide2 {background-image: url(../../dist/img/slide2.jpg);}
-.slide3 {background-image: url(../../dist/img/slide3.jpg);}
-
-
-.slide-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.slide-content {
-    span {
-        font-size: 5rem;
-        color: white;
     }
 }
-
-.arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    z-index: 1;
-}
-
-#arrow-left {
-    border-width: 30px 40px 30px 0;
-    border-color: transparent #fff transparent transparent;
-    left: 5%;
-}
-
-
-
-#arrow-right {
-    border-width: 30px  0 30px 40px;
-    border-color: transparent transparent transparent #fff;
-    right: 5%;
-}
-
